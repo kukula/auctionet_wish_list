@@ -9,6 +9,7 @@ gem 'sass-rails', github: 'rails/sass-rails', branch: 'master'
 gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: 'master'
 gem 'sprockets', github: 'rails/sprockets', branch: 'master'
 gem 'babel-transpiler'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'turbolinks'
 gem 'jquery-rails'

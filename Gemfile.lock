@@ -76,10 +76,16 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.0.0)
+    autoprefixer-rails (6.2.3)
+      execjs
+      json
     babel-source (5.8.34)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.1)
     celluloid (0.17.2)
@@ -225,6 +231,7 @@ PLATFORMS
 
 DEPENDENCIES
   babel-transpiler
+  bootstrap-sass (~> 3.3.6)
   byebug
   jquery-rails
   pg
