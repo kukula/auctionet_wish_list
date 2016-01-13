@@ -12,6 +12,7 @@ gem 'babel-transpiler'
 
 gem 'turbolinks'
 gem 'jquery-rails'
+gem 'slim-rails'
 
 gem 'puma'
 
