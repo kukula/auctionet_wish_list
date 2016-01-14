@@ -19,3 +19,14 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# .gitignore from auctionet lib, remove after extraction to a gem
+/lib/auctionet/.bundle/
+/lib/auctionet/.yardoc
+/lib/auctionet/Gemfile.lock
+/lib/auctionet/_yardoc/
+/lib/auctionet/coverage/
+/lib/auctionet/doc/
+/lib/auctionet/pkg/
+/lib/auctionet/spec/reports/
+/lib/auctionet/tmp/
