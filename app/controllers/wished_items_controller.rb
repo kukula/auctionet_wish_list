@@ -10,6 +10,7 @@ class WishedItemsController < ApplicationController
   def create
     @wished_item = WishedItem.new(wished_item_params)
     @wished_item.save!
+    WishedItemUpdaterJob.new.perform(@wished_item.id)
   end
 
   def destroy

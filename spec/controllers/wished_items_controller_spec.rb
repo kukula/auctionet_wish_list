@@ -3,6 +3,10 @@ RSpec.describe WishedItemsController, type: :controller do
   let(:valid_attributes) { { external_id: 42 } }
   let(:invalid_attributes) { { lol: :wut } }
   let(:valid_session) { {} }
+  before do
+    allow(WishedItemUpdaterJob).to receive(:new).
+      and_return(instance_double('WishedItemUpdaterJob', perform: true))
+  end
 
   describe "GET #index" do
     it "assigns all wished_items as @wished_items" do
