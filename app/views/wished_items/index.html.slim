@@ -1,0 +1,6 @@
+h1 Wish list
+
+- @wished_items.each do |wished_item|
+  = wished_item.external_id
+  = link_to 'Show', wished_item
+  = link_to 'Destroy', wished_item, data: {confirm: 'Are you sure?'}, method: :delete

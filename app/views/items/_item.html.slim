@@ -5,3 +5,4 @@
       h3= item.title
       p= item.description
       p= link_to "View", item_path(item.id), class: "btn btn-primary"
+      p= render 'wished_items/add', external_id: item.id, klass: "btn btn-default"
