@@ -1,0 +1,11 @@
+h1= @item.title
+p= @item.description
+p= "Status: #{@item.state}"
+p= "Next bid: #{@item.next_bid_amount} #{@item.currency}"
+p= "Estimate: #{@item.estimate} #{@item.currency}"
+p= "Number of bids: #{@item.bids.count}"
+p= link_to @item.url, @item.url
+.row
+  .col-sm-12.col-md-12
+    - @item.images.each do |image|
+      img src="#{image['w200']}"

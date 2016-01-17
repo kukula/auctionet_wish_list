@@ -1,0 +1,5 @@
+h1 Items
+
+- @items.each_slice(4) do |items_group|
+  .row
+    = render partial: 'item', collection: items_group

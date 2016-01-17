@@ -1,0 +1,7 @@
+.col-sm-4.col-md-3
+  .thumbnail
+    img src="#{item.images[0]['w200']}"
+    .caption
+      h3= item.title
+      p= item.description
+      p= link_to "View", item_path(item.id), class: "btn btn-primary"
