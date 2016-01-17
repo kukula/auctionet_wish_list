@@ -24,21 +24,21 @@ gem 'auctionet', '0.1.0', path: './lib/auctionet/'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
-
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 3.0'
 end
 
 group :development, :test do
+  gem 'byebug'
   gem 'spring'
   gem 'rspec-rails', git: 'https://github.com/rspec/rspec-rails.git', branch: 'master'
   gem 'rspec-core', git: 'https://github.com/rspec/rspec-core.git', branch: 'master'
   gem 'rspec-support', git: 'https://github.com/rspec/rspec-support.git', branch: 'master'
   gem 'rspec-expectations', git: 'https://github.com/rspec/rspec-expectations.git', branch: 'master'
   gem 'rspec-mocks', git: 'https://github.com/rspec/rspec-mocks.git', branch: 'master'
+end
+
+group :test do
+  gem 'shoulda-matchers'
 end
