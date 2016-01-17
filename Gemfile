@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'slim-rails'
 
 gem 'puma'
+gem 'auctionet', '0.1.0', path: './lib/auctionet/'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
