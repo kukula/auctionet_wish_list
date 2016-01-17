@@ -14,7 +14,7 @@ RSpec.describe Category, type: :model do
         with("categories", params: {}).
         and_return({ "categories" => [] })
 
-      result = Category.all(cached: false)
+      result = Category.all
 
       expect(result).to be_an(Array)
       expect(result.count).to be_zero
@@ -25,7 +25,7 @@ RSpec.describe Category, type: :model do
         with("categories", params: {}).
         and_return({ "categories" => [auctionet_response] })
 
-      result = Category.all(cached: false).first
+      result = Category.all.first
 
       expect(result).to be_an(Category)
       expect(result.id).to eq auctionet_response["id"]
@@ -39,7 +39,7 @@ RSpec.describe Category, type: :model do
         with("categories", id: 42, params: {}).
         and_return({ "category" => auctionet_response })
 
-      result = Category.find(42, cached: false)
+      result = Category.find(42)
 
       expect(result).to be_an(Category)
       expect(result.id).to eq auctionet_response["id"]

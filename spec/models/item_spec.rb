@@ -15,7 +15,7 @@ RSpec.describe Item, type: :model do
         with("items", params: {}).
         and_return({ "items" => [] })
 
-      result = Item.all(cached: false)
+      result = Item.all
 
       expect(result).to be_an(Array)
       expect(result.count).to be_zero
@@ -26,7 +26,7 @@ RSpec.describe Item, type: :model do
         with("items", params: {}).
         and_return({ "items" => [auctionet_response] })
 
-      result = Item.all(cached: false).first
+      result = Item.all.first
 
       expect(result).to be_an(Item)
       expect(result.id).to eq auctionet_response["id"]
@@ -41,7 +41,7 @@ RSpec.describe Item, type: :model do
         with("items", id: 42, params: {}).
         and_return({ "item" => auctionet_response })
 
-      result = Item.find(42, cached: false)
+      result = Item.find(42)
 
       expect(result).to be_an(Item)
       expect(result.id).to eq auctionet_response["id"]
