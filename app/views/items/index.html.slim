@@ -1,4 +1,6 @@
-h1 Items
+h1
+  | Items
+  = " in category '#{@category.name}'" if @category
 
 - @items.each_slice(4) do |items_group|
   .row

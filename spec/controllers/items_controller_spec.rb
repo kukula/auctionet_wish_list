@@ -10,6 +10,17 @@ RSpec.describe ItemsController, type: :controller do
 
       expect(response).to have_http_status(:success)
     end
+
+    context "nested in categories" do
+      it "returns http success" do
+        expect(Item).to receive(:all).
+          with(options: { state: "published", category_id: 1 }).
+          and_return([Item.new])
+        get :index, params: { category_id: 1 }
+
+        expect(response).to have_http_status(:success)
+      end
+    end
   end
 
   describe "GET show" do
